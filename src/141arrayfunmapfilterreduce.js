@@ -103,3 +103,13 @@ let myEvenSqSum = myNum.filter(e => e%2===0)
 console.log(myEvenSqSum);
 
 
+const arr = [1, 2, 3];
+const result = arr.map(num => {
+    num * 2;
+});
+console.log(result);
+
+
+const arr = [1, 2, 3];
+const result = arr.map(num => num + 1);
+console.log(result);

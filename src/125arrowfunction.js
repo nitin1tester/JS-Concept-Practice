@@ -136,3 +136,9 @@ let empDetails = (...details)=>{
     console.log(details.length);    
 }
 empDetails("nitin",32,'Bangalore',true)
+
+ 
+let result = (a,b)=> a*b;
+let res = result(3,6);
+console.log(res);
+

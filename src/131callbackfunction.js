@@ -62,7 +62,7 @@ let sayHello = function(callback){ // you can write any keyword like nitin, ram.
     callback();
 }
 
-sayHello(sayHi)
+sayHello(sayHi);
 
 console.log("====================================");
   

@@ -78,6 +78,13 @@ let initDriver = function( browserName){
     }
 
 }
+ 
+let test = function (){
+ console.log(" middle of the function");
+ return 10 ;
+}
+let one = test()
+console.log(one);
 
 let isValidBrowser =  initDriver('chrome');
 console.log(isValidBrowser);

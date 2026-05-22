@@ -11,18 +11,21 @@
  * LET (Block-Scoped):
  * - Cannot be re-initialized in same scope ✗
  * - Can be reassigned ✓
- * - Hoisting: YES (but Temporal Dead Zone - ReferenceError before initialization)
+ * - Hoisting: No (but Temporal Dead Zone - ReferenceError before initialization)
  * - Scope: Block-level (if/for/while/function/etc)
  * - PREFERRED for modern JavaScript
  * 
  * CONST (Block-Scoped, Immutable):
  * - Cannot be re-initialized ✗
  * - Cannot be reassigned ✗ (but object properties CAN be modified)
- * - Hoisting: YES (Temporal Dead Zone)
+ * - Hoisting: No (Temporal Dead Zone)
  * - Scope: Block-level
  * - BEST PRACTICE: Use by default unless variable needs to be reassigned
  */
  
+
+//1. var: 
+
 var x = `Nitin`;
 var x = `sharddha`;
 var x = `Shivansh`;
@@ -35,7 +38,8 @@ y = `shivu`;
 console.log(y);
 
 // Hoisting
-console.log(t); // undefined  (Its a known bug in javascript)var t = 100;
+console.log(t); // undefined  (Its a known bug in javascript)var 
+t = 100;
 console.log(t); // 100
 
 

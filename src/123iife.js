@@ -60,6 +60,10 @@
     console.log("browser name ", browserName);
 })("firefox");
 
+(function(){
+    console.log("I am in middle of the program");
+})();
+
 
 (
     function(){

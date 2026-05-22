@@ -42,8 +42,8 @@
 // character sequance in selenium.
 
 function selectCountryfromDropdown(...countryName){
-    console.log('Select country ' , countryName)
-    console.log(countryName.length);
+    console.log('Select country ' , countryName) 
+    console.log(countryName.length); 
     
     // its an array so using ireration
     for(let e of countryName ){

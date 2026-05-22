@@ -36,8 +36,8 @@ console.log(1*1);//1
 console.log(2*"3");//6
 console.log("4"*"5"); // 20
 console.log("hello"*6); // NaN
-console.log("hello " * null);
-console.log("hello " * undefined);
+console.log("hello " * null); // NaN (null converts to 0, so it's like "hello" * 0)
+console.log("hello " * undefined); // NaN (undefined converts to NaN)
 
 //division
 console.log(10/"5");//2
@@ -45,14 +45,14 @@ console.log("40"/"10");//4
 console.log(`8`/`4`);//2
 
 // unary plus operator 
-console.log(+"42"+5);
+console.log(+"42"+5); // 47 (string '42' converted to number 42, then 42 + 5 = 47)
 
 // unary negation
-console.log(-"42"+5);
+console.log(-"42"+5); // -37 (string '42' converted to number 42, then negated to -42, then -42 + 5 = -37)
 
 let amount = 100.6;
-console.log(Number.parseInt(amount)+20);
-console.log(Number.parseFloat(amount)+31.5);
+console.log(Number.parseInt(amount)+20); // 120 (parseInt converts 100.6 to 100, then adds 20)
+console.log(Number.parseFloat(amount)+31.5); // 132.1 (parseFloat converts 100.6 to 100.6, then adds 31.5)
 
 console.log(4 + -2);//2
 
