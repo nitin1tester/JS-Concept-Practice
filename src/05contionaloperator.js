@@ -1,3 +1,26 @@
+/**
+ * CONDITIONAL STATEMENTS & FLOW CONTROL
+ * 
+ * if-else: Execute code based on condition
+ * - if (condition) { } else { }
+ * - Executes ONE block based on boolean result
+ * 
+ * if-else if-else: Multiple conditions
+ * - Checks conditions sequentially, stops at first true
+ * - Use when checking multiple unrelated conditions
+ * 
+ * Nested if: if statements inside if blocks
+ * - Use for complex multi-level conditions
+ * - Can become hard to read (avoid deep nesting)
+ * 
+ * switch-case: More readable for many options
+ * - Compares single value against multiple cases (=== comparison)
+ * - Use break to exit switch
+ * - default: fallback if no case matches
+ * - Better than many if-else for multiple fixed values
+ * 
+ * Use in Testing: Validating different browser types, environments, or user roles
+ */
 // ifelse block
 // if if if else
 // if else if else

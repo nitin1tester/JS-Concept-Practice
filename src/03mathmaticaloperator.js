@@ -1,3 +1,24 @@
+/**
+ * TYPE COERCION & MATHEMATICAL OPERATORS
+ * 
+ * JavaScript performs automatic type conversion (coercion) during operations:
+ * 
+ * Addition (+):
+ * - If either operand is STRING → result is STRING (1 + '1' = '11')
+ * - Otherwise → numeric addition (1 + 1 = 2)
+ * 
+ * Other Operators (-, *, /, %):
+ * - Strings are converted to NUMBERS automatically
+ * - '5' - 3 = 2 (string '5' converted to number)
+ * - "hello" - 5 = NaN (non-numeric string converts to NaN)
+ * 
+ * Special Cases:
+ * - NaN: Result when string can't be converted to number
+ * - null: Converts to 0 in numeric context
+ * - undefined: Converts to NaN
+ * 
+ * BODMAS: Order of operations - Brackets, Order, Division, Multiply, Add, Subtract
+ */
 //addition
 console.log(1+1);//2
 console.log('1'+1); //11

@@ -1,3 +1,47 @@
+/**
+ * OOP IN PRACTICE: Testing Concepts & Patterns
+ * 
+ * Instantiation with new:
+ * - let car = new Car() creates instance
+ * - Constructor runs, properties initialized
+ * - Instance has own copy of properties
+ * - Speed = 100 for Car, 300 for BMW
+ * 
+ * Method Overriding Demo:
+ * - bmw.start() calls BMW.start() (overridden)
+ * - Inherited methods still available: bmw.stop()
+ * - Polymorphism: car.start() works for any car type
+ * 
+ * Static Access:
+ * - Car.wheels accessible WITHOUT instantiation
+ * - Shared across all instances
+ * - Used for class-level constants
+ * 
+ * OOP Features Supported:
+ * ✓ 1. Inheritance: BMW extends Car (YES)
+ * ✓ 2. Method Overriding: BMW redefines start() (YES - Partial Polymorphism)
+ * ✓ 3. Objects/Classes: class Car { } (YES)
+ * ✓ 4. Encapsulation: Private #fields (YES)
+ * ✓ 5. Public/Private: # for private (YES)
+ * ✓ 6. Modules: import/export (YES)
+ * 
+ * OOP Features NOT Supported:
+ * ✗ 1. Abstraction/Interfaces: No abstract classes (NO)
+ * ✗ 2. Method Overloading: Multiple signatures (NO - latest wins)
+ * 
+ * Testing Pattern:
+ * - Base page object class with common methods
+ * - Specific pages extend base (inherit)
+ * - Override methods for specific behavior
+ * - Use static for test configurations
+ * 
+ * Use-Cases:
+ * - LoginPage extends BasePage { login() { } }
+ * - HomePage extends BasePage { navigateToHome() { } }
+ * - Test runner instantiates and uses polymorphically
+ * 
+ * WHERE: Automated testing, page objects, test frameworks
+ */
 // import * as test from "./192cardesign";
 // Car class is improted as default.
 import Car, { BMW,Audi } from "./192cardesign.js";

@@ -1,3 +1,40 @@
+/**
+ * FUNCTIONS: Reusable Code Blocks
+ * 
+ * Definition: Set of statements grouped to perform specific task
+ * Called by name, can be reused multiple times
+ * 
+ * Function Hoisting:
+ * - Can call function BEFORE declaring it in code
+ * - WHY: JavaScript hoists function declarations to top
+ * - WHERE: Traditional functions only (not arrow/expression)
+ * 
+ * Types of Functions:
+ * 1. No input, No output: Just logs something
+ * 2. No input, With output: Returns static value
+ * 3. With input, With output: Takes parameters, returns result
+ * 
+ * Parameters vs Arguments:
+ * - Parameters: Variables defined in function signature
+ * - Arguments: Actual values passed when calling function
+ * - Call by value: Primitive types passed by value (copy)
+ * - Call by reference: Objects passed by reference
+ * 
+ * Return Statement:
+ * - Single return at end (better than multiple returns)
+ * - WHY: Easier to read, maintain, test
+ * 
+ * Function Properties:
+ * - functionName.name: Returns function name (string)
+ * - functionName.length: Returns number of parameters
+ * - typeof functionName: Returns "function"
+ * 
+ * Use-Cases in Testing:
+ * - Page Object Methods: Interactions with UI
+ * - Utility Functions: Common operations (login, click, wait)
+ * - Test Data Builders: Create complex test objects
+ * - Assertions: Custom validation logic
+ */
 // 1. simple function :- no input no return
 
 //function hoisting is allowed calling first implimenting letar in script.

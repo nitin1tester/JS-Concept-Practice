@@ -1,5 +1,45 @@
+/**
+ * ANONYMOUS FUNCTIONS: Functions Without Names
+ * 
+ * Definition: Function with NO identifier
+ * Must use function expression (cannot be standalone)
+ * Syntax: let varName = function() { }
+ * 
+ * Key Differences from Named Functions:
+ * 1. No hoisting: Cannot call before definition
+ * 2. Must assign to variable or use immediately
+ * 3. Called via variable name, not function name
+ * 4. Hard to debug (stack traces show variable name)
+ * 
+ * Hoisting Behavior:
+ * - Cannot hoist anonymous functions
+ * - Calling before assignment throws: "x is not a function"
+ * - let/const have temporal dead zone
+ * 
+ * Use-Cases:
+ * - Callback functions: .then(), .map(), setTimeout()
+ * - Event handlers
+ * - Array methods
+ * - HOF (higher-order functions)
+ * 
+ * Advantages:
+ * - Function identifiers (like "initDriver") available in closure
+ * - Can reference itself for recursion (named IIFE)
+ * - Better for callbacks (cleaner code)
+ * 
+ * Testing Use-Cases:
+ * - Login page handler: let login = function(browserName) { }
+ * - Test utilities assigned to variables
+ * - Callbacks for async operations
+ * - WHERE: Page objects, test fixtures, utilities
+ * 
+ * Modern Alternative: Arrow functions (=>) are more concise
+ * - let login = (browserName) => { }
+ * - Preferred in modern JavaScript
+ */
+
 // Annonymous function : function with no name.
-// we can't create Annonymous function without function expression. 
+// we cannot create Annonymous function without function expression. 
 // hoisting is not allowed for Annonymous function  (its allowed only for simple function)
 // let can use only let not var
 // here function expression name is called indentifier (value,initDriver)

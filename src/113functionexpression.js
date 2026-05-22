@@ -1,3 +1,40 @@
+/**
+ * FUNCTION EXPRESSIONS: Functions as Values
+ * 
+ * Definition: Assigning function to variable
+ * Syntax: let varName = function functionName() { }
+ * 
+ * Key Differences from Function Declarations:
+ * 1. No hoisting: Cannot call before definition (unlike regular functions)
+ * 2. Function has TWO names:
+ *    - varName: Expression identifier (used to call function)
+ *    - functionName: Actual function name (used for recursion, debugging)
+ * 3. Can use as value: Pass to other functions, store in variables
+ * 
+ * Named vs Anonymous Function Expression:
+ * - Named: let cart = function addToCart() { } - better for debugging
+ * - Anonymous: let cart = function() { } - simpler but harder to debug
+ * 
+ * Calling Function Expression:
+ * - Use expression name: cart() works
+ * - Use function name: addToCart() throws error (not defined in scope)
+ * - Only expression identifier is available outside function
+ * 
+ * Use-Cases:
+ * - WHY: Create functions dynamically, pass as callbacks
+ * - WHERE: Event handlers, array methods (map, filter), setTimeout
+ * 
+ * Use-Cases in Testing:
+ * - Create test utilities dynamically
+ * - Pass to higher-order functions
+ * - Use with Promise.then() callbacks
+ * - Create custom assertions
+ * 
+ * Best Practice:
+ * - Use arrow functions (=>) for modern code
+ * - Use function expressions for callbacks
+ * - Named expressions for better stack traces
+ */
 // function expression
 
 let cart = function addToCart(){

@@ -1,3 +1,18 @@
+/**
+ * PRIMITIVE DATA TYPES vs NON-PRIMITIVE DATA TYPES
+ * 
+ * Primitive Types: Fixed-size memory allocated on the STACK (fast access)
+ * - No Garbage Collection (GC) needed
+ * - Predefined by JavaScript
+ * - Types: number, string, boolean, undefined, null, BigInt, Symbol
+ * 
+ * Non-Primitive Types: Dynamic memory allocated on the HEAP
+ * - Require Garbage Collection
+ * - Reference-based (variables store memory address, not actual value)
+ * - Types: Object, Array, Function, Date, etc.
+ * 
+ * Key Difference: Primitives are immutable; Non-primitives are mutable
+ */
 // Data Type: Type of data
 // 1. Primitive data Type: where memory are fixed, Predefined data type  | Fixed Memory | no GC.
 // 2. Non Primitive data type: where memeory are not fixed & Object / referance/Class/Array?Function/Interface | dynamic memory | Heap. 

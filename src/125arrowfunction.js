@@ -1,3 +1,47 @@
+/**
+ * ARROW FUNCTIONS (=>): Modern Function Syntax
+ * 
+ * Syntax: (params) => { body } or param => expression
+ * - Concise syntax, no 'function' keyword
+ * - Anonymous by default
+ * - Heavily used in modern JavaScript (Playwright, Node.js)
+ * 
+ * Parameter Variations:
+ * 1. No params: () => console.log("hello")
+ * 2. One param: name => console.log(name)  (no parens needed)
+ * 3. Multiple params: (a, b) => a + b
+ * 4. Rest params: (...args) => { }
+ * 
+ * Return Behavior:
+ * 1. Single expression: x => x * 2  (auto returns)
+ * 2. Block body: (x) => { let y = x * 2; return y; }  (need explicit return)
+ * 3. Return object: () => ({name: 'test'})  (need parentheses)
+ * 
+ * Key Differences from Regular Functions:
+ * - No 'this' binding: 'this' refers to parent scope
+ * - No 'arguments' object
+ * - Cannot use as constructor (no 'new')
+ * - No hoisting
+ * 
+ * WHY Use Arrow Functions:
+ * - Cleaner, more readable syntax
+ * - Perfect for callbacks
+ * - Consistent 'this' binding (lexical scoping)
+ * - WHERE: Callbacks, array methods, async/await
+ * 
+ * Use-Cases in Testing:
+ * - Array operations: arr.map(e => e.name)
+ * - Callbacks: .then(res => { })
+ * - Test methods: const login = (user) => { }
+ * - Event handlers (be careful with 'this')
+ * - WHY: Modern, concise, works great with promises
+ * - WHERE: Playwright, Webdriver, test utilities
+ * 
+ * WARNING: Don't use arrow functions for:
+ * - Object methods needing 'this'
+ * - Constructor functions
+ * - When you need 'arguments' object
+ */
 
 //Arrow Function: => 
 // has no name: annonymous function 

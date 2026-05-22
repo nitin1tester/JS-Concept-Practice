@@ -1,3 +1,46 @@
+/**
+ * ARRAY HIGHER-ORDER FUNCTIONS: map, filter, reduce
+ * 
+ * map(): Transform each element
+ * - Syntax: array.map(callback)
+ * - Returns: NEW array with transformed elements
+ * - Does NOT modify original
+ * - WHY: Convert data format, extract properties
+ * - WHERE: ['NITIN'] = ['nitin'].map(x => x.toUpperCase())
+ * - Use-Case: Extract IDs from objects, scale values
+ * 
+ * filter(): Select elements matching condition
+ * - Syntax: array.filter(callback)
+ * - Returns: NEW array with elements passing test
+ * - Removes elements NOT matching condition
+ * - WHY: Get subset of data
+ * - WHERE: [2,4,6] = [1,2,3,4,5,6].filter(x => x % 2 === 0)
+ * - Use-Case: Get even numbers, active users, products with keyword
+ * 
+ * reduce(): Combine all elements into single value
+ * - Syntax: array.reduce((accumulator, element) => { }, initialValue)
+ * - Returns: Single value (number, string, object)
+ * - Accumulator: Carries result through iterations
+ * - WHY: Sum, concatenate, build objects
+ * - WHERE: Sum = [1,2,3].reduce((sum, n) => sum + n, 0) // 6
+ * - Use-Case: Total, concatenate strings, build objects
+ * 
+ * Chaining:
+ * - Combine map, filter, reduce
+ * - Process data in pipeline
+ * - WHY: Complex transformations in readable steps
+ * - WHERE: filter(even) → map(square) → reduce(sum)
+ * 
+ * Use-Cases in Testing:
+ * - Extract test IDs: testCases.map(tc => tc.id)
+ * - Find active tests: tests.filter(t => t.active)
+ * - Calculate metrics: results.reduce((sum, r) => sum + r.score, 0)
+ * - Transform API responses: data.map(d => ({ id: d.id, name: d.name }))
+ * - WHERE: Test data processing, result aggregation, assertions
+ * 
+ * Performance: map > filter > reduce (in processing order)
+ * Prefer chaining over nested loops for readability
+ */
 
 // 1 map : transfer every element of the given array
 // return >> array

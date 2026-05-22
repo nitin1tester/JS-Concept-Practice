@@ -1,3 +1,49 @@
+/**
+ * CALLBACK FUNCTIONS: Functions as Arguments
+ * 
+ * Definition: Function passed as argument to another function
+ * Called later by the receiving function
+ * Enables: HOF (Higher-Order Functions), async operations
+ * 
+ * Three Calling Patterns:
+ * 1. Call by Value: Pass primitive value (copy)
+ * 2. Call by Reference: Pass object (reference)
+ * 3. Call by Function: Pass function as callback
+ * 
+ * How It Works:
+ * - Parent function accepts callback parameter
+ * - Parent function calls callback when needed
+ * - Callback parameter name can be anything (convention: 'callback')
+ * - WHY: Execute custom logic at specific points
+ * 
+ * Callback Must Be Last Parameter:
+ * - Convention in JavaScript
+ * - Makes code more readable
+ * - Easier to understand intent
+ * 
+ * Use-Cases:
+ * - array.forEach(callback)
+ * - array.map(callback)
+ * - array.filter(callback)
+ * - setTimeout(callback, delay)
+ * - promise.then(callback)
+ * 
+ * Inline Callbacks:
+ * - Can pass anonymous function directly
+ * - Arrow functions perfect for this
+ * - WHY: Clean, concise inline logic
+ * 
+ * Use-Cases in Testing:
+ * - Page Objects: browser.click(selector, callback)
+ * - Test Utilities: waitForElement(selector, onFound)
+ * - Data Processing: forEach(testCase, runTest)
+ * - Event Handling: onClick(() => { })
+ * - WHERE: Async operations, array processing, event handlers
+ * 
+ * Problems with Callbacks:
+ * - Callback Hell: Deeply nested callbacks (hard to read)
+ * - Solution: Promises, async/await
+ */
 
 // callback : as callback function is a simple function passed as argument to another function
 //  which will be called later.

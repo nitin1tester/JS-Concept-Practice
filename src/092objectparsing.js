@@ -1,3 +1,36 @@
+/**
+ * JSON: JavaScript Object Notation (Data Format)
+ * 
+ * SERIALIZATION (Object → JSON String):
+ * - JSON.stringify(object) converts JavaScript object to JSON string
+ * - WHY: Send data over network, store in files/database
+ * - WHERE: API requests, local storage, logging
+ * 
+ * DESERIALIZATION (JSON String → Object):
+ * - JSON.parse(jsonString) converts JSON string back to object
+ * - WHY: Receive data from API, read stored data
+ * - WHERE: API responses, reading from storage
+ * 
+ * Testing Use-Cases:
+ * - POST request: Convert JS object → JSON → Send to API
+ * - GET response: Receive JSON → Parse → Validate object properties
+ * - Data comparison: Stringify both objects, compare as strings
+ * 
+ * JSON.stringify(obj, null, 2):
+ * - null: replacer (no filtering)
+ * - 2: indentation level (pretty print for readability)
+ * - WHY: Formatted output for debugging/logging
+ * 
+ * Nested Objects:
+ * - Serialization works with nested structures
+ * - Arrays and objects all converted to JSON
+ * - Deserialization reconstructs full hierarchy
+ * 
+ * Important:
+ * - JSON only supports: strings, numbers, booleans, arrays, objects, null
+ * - Functions, undefined, Symbols are LOST during serialization
+ * - Use for: Data exchange, NOT for deep cloning functions
+ */
 //JS object ---> JSON : Serialization (marsheling)
 //JSON ----> JS object : de-serialization (unmarshelling)
 

@@ -1,3 +1,25 @@
+/**
+ * ARRAY METHODS: Mutating & Non-Mutating Operations
+ * 
+ * MUTATING Methods (modify original array):
+ * - push(element): Add element at END, returns new length
+ * - pop(): Remove & return LAST element
+ * - unshift(element): Add element at START, returns new length
+ * - shift(): Remove & return FIRST element
+ * - splice(start, deleteCount, ...items): Remove/add elements at any position
+ *   Syntax: arr.splice(startIndex, numToDelete, item1, item2, ...)
+ *   Returns array of deleted elements
+ * 
+ * NON-MUTATING Methods (original array unchanged):
+ * - indexOf(element, fromIndex): Find FIRST occurrence, returns index or -1
+ *   Use-Case in testing: if (arr.indexOf(value) !== -1) { /* found */ }
+ * - slice(start, end): Extract portion without modifying
+ * 
+ * Use-Cases in Testing:
+ * - push/pop: Building/removing test data from lists
+ * - indexOf: Checking if element exists (better than includes for some cases)
+ * - splice: Removing specific failed test from results
+ */
 let arr = [1,2,3,4,5];
 console.log(arr); //[ 1, 2, 3, 4, 5 ]
 console.log("-----------push------------");

@@ -1,7 +1,28 @@
-
-//1. var: 
-
-// intialization 
+/**
+ * VARIABLE DECLARATIONS: var, let, const
+ * 
+ * VAR (Function-Scoped):
+ * - Can be re-initialized (var x = 10; var x = 20;) ✓
+ * - Can be reassigned (var x = 10; x = 20;) ✓
+ * - Hoisting: YES (initialized as undefined)
+ * - Scope: Function-level (globally if outside function)
+ * - DEPRECATED in modern JS (use let/const instead)
+ * 
+ * LET (Block-Scoped):
+ * - Cannot be re-initialized in same scope ✗
+ * - Can be reassigned ✓
+ * - Hoisting: YES (but Temporal Dead Zone - ReferenceError before initialization)
+ * - Scope: Block-level (if/for/while/function/etc)
+ * - PREFERRED for modern JavaScript
+ * 
+ * CONST (Block-Scoped, Immutable):
+ * - Cannot be re-initialized ✗
+ * - Cannot be reassigned ✗ (but object properties CAN be modified)
+ * - Hoisting: YES (Temporal Dead Zone)
+ * - Scope: Block-level
+ * - BEST PRACTICE: Use by default unless variable needs to be reassigned
+ */
+ 
 var x = `Nitin`;
 var x = `sharddha`;
 var x = `Shivansh`;

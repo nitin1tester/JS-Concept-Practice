@@ -1,3 +1,42 @@
+/**
+ * PROMISE CHAINING: Sequential Async Operations
+ * 
+ * Concept:
+ * - Each .then() returns new promise
+ * - Next .then() waits for previous to complete
+ * - Creates flat sequence vs nested callbacks
+ * 
+ * How Chaining Works:
+ * - Step 1: promise.then() → get result A
+ * - Step 2: .then() → use result A, return result B
+ * - Step 3: .then() → use result B, return result C
+ * - CRITICAL: Must return value/promise from each .then()
+ * 
+ * Error Handling:
+ * - Single .catch() at end handles any error in chain
+ * - Error stops chain execution (remaining .then() skipped)
+ * - Finally runs regardless of success/error
+ * 
+ * Use-Cases:
+ * - Coffee Machine: step1().then(step2).then(step3)
+ * - API Calls: fetch(url1).then(res => fetch(res.nextUrl))
+ * - Database: query1().then(result => query2(result))
+ * 
+ * Problem This Solves:
+ * - Callback Hell: Deeply nested callbacks
+ * - Hard to read: Now readable left-to-right
+ * - Error handling: Centralized catch
+ * 
+ * Note: Even better with async/await
+ * - Promise chaining still used but async/await preferred
+ * - Looks more like synchronous code
+ * 
+ * Use-Cases in Testing:
+ * - Test flows: step1().then(step2).then(assert)
+ * - API testing: request().then(validate).then(cleanup)
+ * - UI automation: click().then(wait).then(verify)
+ * - WHERE: Multi-step tests, async validations
+ */
 
 // let do same example "coffee machine" with promise now
 // example:- coffee machine 

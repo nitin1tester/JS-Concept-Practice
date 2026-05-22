@@ -1,3 +1,35 @@
+/**
+ * TWO-DIMENSIONAL ARRAYS (MATRICES)
+ * 
+ * Definition: Array of arrays - nested structure
+ * Syntax: let arr = [[1,2,3], [4,5,6], [7,8,9]]
+ * 
+ * Balanced 2D Array:
+ * - Uniform matrix: all rows have same number of columns
+ * - Easy to process, predictable structure
+ * - WHY: Structured data, easier to work with
+ * - WHERE: Data grids, spreadsheets, game boards, game of tic-tac-toe
+ * 
+ * Jagged Array:
+ * - Non-uniform: rows have different number of columns
+ * - Flexible but harder to process
+ * - Example: [[1,2,3], [10], [23,52,64,24]]
+ * 
+ * Accessing Elements:
+ * - arr[0][0]: First row, first column
+ * - arr[i][j]: Row i, Column j
+ * - Requires nested loops: for(i) { for(j) { } }
+ * 
+ * Testing Use-Case:
+ * - BALANCED 2D arrays used for DATA PARAMETERIZATION in test automation
+ * - Each row = test case with different parameters
+ * - Jagged arrays NOT used in testing (inconsistent data structure)
+ * 
+ * WHY 2D Arrays in Testing:
+ * - Run same test with multiple data sets
+ * - Execute 1000s of test cases without code duplication
+ * - Example: Excel data converted to 2D array
+ */
 let num = [
     [1,2,3,100],
     [4,5,6,200],

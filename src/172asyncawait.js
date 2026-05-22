@@ -1,3 +1,54 @@
+/**
+ * ASYNC/AWAIT: Modern Async Syntax
+ * 
+ * What is async/await:
+ * - Syntactic sugar over Promises
+ * - Makes async code look synchronous
+ * - Easier to read, understand, debug
+ * - Modern replacement for promise chaining
+ * 
+ * async Keyword:
+ * - Marks function as asynchronous
+ * - ALWAYS returns Promise
+ * - Can use 'await' inside
+ * - WHY: Enables awaiting promises within function
+ * 
+ * await Keyword:
+ * - Pauses function execution
+ * - Waits for promise to resolve
+ * - Only works inside async function
+ * - Extracts resolved value (unwraps promise)
+ * - WHY: Sequential async operations look like sync code
+ * 
+ * Comparison with Promises:
+ * Promise way: func().then(x => func2(x)).then(y => console.log(y))
+ * async way: let x = await func(); let y = await func2(x); console.log(y);
+ * - async/await is MUCH more readable
+ * 
+ * Error Handling:
+ * - try/catch works naturally with async/await
+ * - try { let x = await promise } catch(e) { handle error }
+ * - Much cleaner than .catch()
+ * - WHY: Familiar error handling pattern
+ * 
+ * Sequential vs Parallel:
+ * - Sequential: await op1; await op2; (slower if independent)
+ * - Parallel: Promise.all([op1, op2]) or start both then await
+ * 
+ * Use-Cases in Testing:
+ * - Async test flows: await login(); await fillForm(); await submit();
+ * - API testing: const res = await fetch(url); assert(res);
+ * - UI automation: await click(selector); await waitForElement();
+ * - Setup/teardown: await setup(); /* test */; await cleanup();
+ * - WHERE: Playwright tests, WebDriver tests, any async testing
+ * 
+ * Best Practices:
+ * - Use async/await instead of promises (more readable)
+ * - Use Promise.all for parallel operations
+ * - Always error handling (try/catch)
+ * - Avoid unnecessary awaits in loops
+ */
+
 //async - await:
 
 //async:- function: 

@@ -1,3 +1,40 @@
+/**
+ * OBJECTS: Key-Value Data Structures
+ * 
+ * Definition: Non-primitive data type, reference-based storage
+ * Format: { key: value, key: value, ... }
+ * Also called: Associative arrays, Hash maps, Dictionaries
+ * 
+ * CRUD Operations:
+ * 
+ * CREATE/READ:
+ * - Dot notation: obj.name (cleaner, preferred)
+ * - Bracket notation: obj['name'] (allows spaces/special chars)
+ * - WHY: Two ways for flexibility
+ * 
+ * UPDATE:
+ * - Direct assignment: obj.name = "new value"
+ * - Modifies existing property
+ * 
+ * CREATE (new property):
+ * - obj.email = "test@example.com" (add new property anytime)
+ * - Unlike Java, JavaScript allows dynamic properties
+ * - WHY: Flexibility, no need to define schema upfront
+ * 
+ * DELETE:
+ * - delete obj.age (removes property)
+ * - WHY: Memory cleanup, remove unwanted properties
+ * 
+ * Nested Objects:
+ * - obj.address.flat accesses nested properties
+ * - WHY: Organize related data hierarchically
+ * - WHERE: User profiles, complex data models, API responses
+ * 
+ * Use-Cases in Testing:
+ * - Test data objects
+ * - API response validation
+ * - Configuration objects
+ */
 
 // object --> non primitive data type
 // referance type

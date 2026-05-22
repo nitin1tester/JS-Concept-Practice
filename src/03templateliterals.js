@@ -1,3 +1,20 @@
+/**
+ * TEMPLATE LITERALS (ES6)
+ * 
+ * Syntax: Use backticks (`) instead of quotes ('' or "")
+ * 
+ * Features:
+ * 1. Multi-line Strings: Preserve line breaks without escaping
+ * 2. String Interpolation: ${expression} - embed variables/expressions directly
+ * 3. Quote Flexibility: Can include single and double quotes without escaping
+ * 4. Expression Evaluation: Any JavaScript expression works inside ${}
+ * 
+ * Advantages over concatenation:
+ * - More readable and cleaner syntax
+ * - Automatic type conversion in ${}
+ * - No accidental type coercion issues
+ * - Escaping not needed for quotes
+ */
 // template literals
 // back tick
 // placeholder ${}

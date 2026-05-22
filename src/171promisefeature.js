@@ -1,4 +1,54 @@
- 
+/**
+ * PROMISE UTILITY METHODS: all, race, allSettled, any
+ * 
+ * Promise.all([p1, p2, p3]):
+ * - Runs all promises IN PARALLEL
+ * - Waits for ALL to succeed
+ * - Returns array of results in same order
+ * - If ANY promise fails → entire thing fails
+ * - WHY: Combine multiple independent async operations
+ * - WHERE: Fetch multiple data sources, parallel tests
+ * - Example: Load user, posts, comments all at once
+ * 
+ * Promise.race([p1, p2, p3]):
+ * - Runs all promises IN PARALLEL
+ * - Returns FIRST promise to complete (success or fail)
+ * - Others continue running (wasteful)
+ * - WHY: Get first result, timeout handling
+ * - WHERE: Timeout fallback, multiple API endpoints
+ * - Example: Race two servers, use faster one
+ * 
+ * Promise.allSettled([p1, p2, p3]):
+ * - Runs all promises IN PARALLEL
+ * - Waits for ALL to complete (success OR fail)
+ * - Returns array of {status, value/reason}
+ * - Never rejects (handles all outcomes)
+ * - WHY: Need all results regardless of failures
+ * - WHERE: Batch operations, error aggregation
+ * - Example: Upload 100 files, report all successes/failures
+ * 
+ * Promise.any([p1, p2, p3]):
+ * - Runs all promises IN PARALLEL
+ * - Returns FIRST successful promise
+ * - Fails if ALL promises fail
+ * - WHY: At least one must succeed
+ * - WHERE: Redundant services, fallback options
+ * - Example: Try multiple mirrors, need at least one
+ * 
+ * Use-Cases in Testing:
+ * - .all(): Wait for multiple test preconditions
+ * - .race(): Implement test timeouts
+ * - .allSettled(): Run all tests, collect results
+ * - .any(): Try multiple test data sources
+ * - WHERE: Parallel test execution, test reporting
+ * 
+ * Performance Comparison:
+ * - All: Fail on first error
+ * - race: Stop at first completion
+ * - allSettled: Always complete, see all results
+ * - any: Succeed on first success
+ */
+
 let p1 = Promise.resolve("task done");
 p1.then((result)=> console.log(result));
 

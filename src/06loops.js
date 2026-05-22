@@ -1,3 +1,25 @@
+/**
+ * LOOPS: Executing code repeatedly
+ * 
+ * while Loop: Repeats while condition is true
+ * - Use when: number of iterations is UNKNOWN
+ * - Syntax: while (condition) { }
+ * - Risk: Infinite loops if condition never becomes false
+ * - Use-Cases: Waiting for element on page, pagination, lazy loading
+ * 
+ * for Loop: Repeats for fixed number of iterations
+ * - Use when: number of iterations is KNOWN (fixed)
+ * - Syntax: for (init; condition; increment) { }
+ * - Components: initialization, condition, increment
+ * - Use-Cases: Iterating arrays, dropdown months (1-12), dates (1-31)
+ * 
+ * do-while Loop: Executes block at least once, then checks condition
+ * - Body executes BEFORE condition check
+ * - Useful when you need at least one execution
+ * - Use-Cases: If element is present, click once and break
+ * 
+ * forEach, for-of, for-in: Array/Object iteration (see 07arraysiteration.js)
+ */
 // 1 to 10
 
 let to = 1;

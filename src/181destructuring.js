@@ -1,3 +1,50 @@
+/**
+ * DESTRUCTURING: Clean Value Extraction
+ * 
+ * What is Destructuring:
+ * - Extract values from arrays/objects and assign to variables in ONE line
+ * - Cleaner than multiple assignments
+ * - WHY: Reduce boilerplate, improve readability
+ * 
+ * Array Destructuring:
+ * - let [a, b, c] = [10, 20, 30]
+ * - Order matters (positional)
+ * - let [x, , z] = arr → skip middle element
+ * - let [first, ...rest] = arr → collect remaining
+ * - let [a = 50] = [] → default values if missing
+ * 
+ * Object Destructuring:
+ * - let {name, age} = {name: 'test', age: 30}
+ * - Order doesn't matter (key-based)
+ * - Can rename: let {name: userName} = obj
+ * - Default values: let {name = 'unknown'} = obj
+ * - Can provide inline defaults
+ * 
+ * Function Parameters:
+ * - Destructure in function parameters directly
+ * - function placeOrder({name, city}) { } 
+ * - Caller passes object: placeOrder({name: 'x', city: 'y'})
+ * - WHY: More readable than multiple parameters
+ * 
+ * Use-Cases:
+ * - Extract specific properties from objects
+ * - Work with API responses: const {id, name} = response
+ * - Function parameters: cleaner alternative to obj.prop
+ * - Swapping values: [a, b] = [b, a]
+ * 
+ * Use-Cases in Testing:
+ * - Extract test data: const {browser, url} = config
+ * - Parse API responses: const {status, data} = response
+ * - Page Object methods: launchBrowser({browserName, headless})
+ * - Test fixtures: const {setup, teardown} = fixture
+ * - WHERE: API testing, config handling, test data processing
+ * 
+ * WHY Use Destructuring:
+ * - Less repetitive code
+ * - Self-documenting (shows what you need)
+ * - Fail-fast (error if property missing)
+ * - Works with defaults for optional data
+ */
 
 // Destructuring :- 
 // clean way to extract value from array or object And assign then to variable in a single line.

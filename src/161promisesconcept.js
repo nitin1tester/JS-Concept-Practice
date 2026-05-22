@@ -1,3 +1,56 @@
+/**
+ * PROMISES: Handling Asynchronous Operations
+ * 
+ * What is a Promise:
+ * - Object representing eventual completion of async operation
+ * - Three states: PENDING → RESOLVED or REJECTED
+ * - WHY: Handle async without callback hell
+ * 
+ * States:
+ * 1. PENDING: Operation in progress
+ * 2. RESOLVED (Fulfilled): Operation completed successfully
+ * 3. REJECTED: Operation failed with error
+ * 
+ * Real-World Analogy (Restaurant Order):
+ * - You place order: Promise created (PENDING)
+ * - Food is ready: Promise RESOLVED
+ * - Restaurant is closed: Promise REJECTED
+ * 
+ * Creating Promise:
+ * - new Promise((resolve, reject) => { })
+ * - resolve(): Mark as success, pass result
+ * - reject(): Mark as failure, pass error
+ * - Parameter names can be anything (convention: resolve, reject)
+ * 
+ * Consuming Promise:
+ * - .then(successCallback): Execute if resolved
+ * - .catch(errorCallback): Execute if rejected
+ * - .finally(alwaysCallback): Execute regardless
+ * 
+ * Promise Chaining:
+ * - promise.then(x => x * 2).then(y => console.log(y))
+ * - Each .then returns new promise
+ * - Must return value to pass to next .then
+ * - WHY: Sequential async operations, cleaner than callbacks
+ * 
+ * Common Async Use-Cases:
+ * - setTimeout(): Delays
+ * - fetch(): API calls
+ * - File reading: Read file from disk
+ * - Database queries: Query results
+ * - AJAX: Load data from server
+ * 
+ * Use-Cases in Testing:
+ * - Wait for element: waitForElement().then(() => click())
+ * - API testing: fetch(url).then(res => assert(res))
+ * - Sequential steps: step1().then(step2).then(step3)
+ * - WHERE: Async test operations, API testing, waiting
+ * 
+ * Advantages over Callbacks:
+ * - Flat structure vs nested pyramid
+ * - Better error handling (catch anywhere)
+ * - Composable (combine multiple promises)
+ */
 
 // promise: is used to handle async operation(things that take time to process)
 // Ex:- (coffee machine)  
