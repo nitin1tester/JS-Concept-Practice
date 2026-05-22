@@ -39,7 +39,7 @@
  * - Async test flows: await login(); await fillForm(); await submit();
  * - API testing: const res = await fetch(url); assert(res);
  * - UI automation: await click(selector); await waitForElement();
- * - Setup/teardown: await setup(); /* test */; await cleanup();
+ * - Setup/teardown: await setup();  test ; await cleanup();
  * - WHERE: Playwright tests, WebDriver tests, any async testing
  * 
  * Best Practices:

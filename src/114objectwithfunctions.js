@@ -30,13 +30,14 @@
  * - Builders: construct test data with method chaining
  * 
  * Example Pattern (Page Object):
- * - let loginPage = { username: "x", login() { /* access username via this */ } }
+ * - let loginPage = { username: "x", login() { access username via this } }
  * - Common in Playwright, Webdriver test automation
  * 
  * Arrow Functions in Objects:
  * - WARNING: Arrow functions DON'T have their own 'this'
  * - Use regular function for 'this' binding
  */
+
 let user = {
     // properties : key value pair
     name:'Nitin',

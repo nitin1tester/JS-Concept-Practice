@@ -12,7 +12,7 @@
  * 
  * NON-MUTATING Methods (original array unchanged):
  * - indexOf(element, fromIndex): Find FIRST occurrence, returns index or -1
- *   Use-Case in testing: if (arr.indexOf(value) !== -1) { /* found */ }
+ *   Use-Case in testing: if (arr.indexOf(value) !== -1) { found  }
  * - slice(start, end): Extract portion without modifying
  * 
  * Use-Cases in Testing:
@@ -20,6 +20,8 @@
  * - indexOf: Checking if element exists (better than includes for some cases)
  * - splice: Removing specific failed test from results
  */
+
+
 let arr = [1,2,3,4,5];
 console.log(arr); //[ 1, 2, 3, 4, 5 ]
 console.log("-----------push------------");
