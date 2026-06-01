@@ -34,13 +34,26 @@
  * - Use arrow functions (=>) for modern code
  * - Use function expressions for callbacks
  * - Named expressions for better stack traces
+ * 
+ * 
+ * key update notes:- 
+ * - using var as well we can't hoist function expression.
+ * - now we can't call it by function name if we have function expression.
+ * 
+ * 
  */
+
+
 // function expression
 
 let cart = function addToCart(){
     console.log("add to cart");
     return 100;
 }
+// now we can't call it by function name as we are using function expression if we
+//  have function expression then we have to call it but function expression name.
+// addToCart(); 
+
 console.log(cart); // [Function: addToCart] >> its a function expression.
 console.log(typeof cart); // type >> function
 

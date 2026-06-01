@@ -44,6 +44,12 @@
  * - Self-documenting (shows what you need)
  * - Fail-fast (error if property missing)
  * - Works with defaults for optional data
+ * 
+ * 
+ *  notes Update
+ * - we have to map local variable 
+ * 
+ * 
  */
 
 // Destructuring :- 
@@ -89,7 +95,7 @@ let customer = {
     zip: 12313
 }
 
-function placeOrder({name,city}){
+function placeOrder({name,city}){ // using only name and city 
     console.log(name,city);
 }
 
@@ -107,5 +113,19 @@ let pageObj = {
 }
 
 launchBrowser(pageObj);
+
+
+/**
+ * this a maping local variable to object variable where empname is mapped with name.
+ */
+let person = {
+    name:'Nitin',
+    age:35,
+    status:true,
+    city:'pune'
+}
+
+let {name:empname,age:empage} = person;
+console.log(empage,empname);
 
 

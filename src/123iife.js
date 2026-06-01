@@ -55,7 +55,7 @@
 // rest(); // rest is not a function at Object.<anonmous>
  
 
-// we can supply parameter to function 
+// we can supply parameter to function  
 (function(browserName){
     console.log("browser name ", browserName);
 })("firefox");
